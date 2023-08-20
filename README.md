@@ -10,4 +10,4 @@ https://github.com/TomsBirze/Bookstore-UI
 ## Continu by setting up the database for back end.
 Download [Docker](https://www.docker.com/products/docker-desktop/) for your operating system
 
-run  docker run --name my-postgres-db -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+(to set up a container. cmd run)  docker run --name my-postgres-db -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres  
