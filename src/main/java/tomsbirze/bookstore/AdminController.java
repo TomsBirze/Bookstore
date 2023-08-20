@@ -14,7 +14,7 @@ public class AdminController {
     public AdminController(BookstoreService bookstoreService) {
         this.bookstoreService = bookstoreService;
     }
-
+    @CrossOrigin(origins = "http://localhost:5173/")
     @PutMapping("/addbook")
     @ResponseStatus(HttpStatus.CREATED)
     public void saveBook(@Valid @RequestBody Book book) {

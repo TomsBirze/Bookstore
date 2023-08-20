@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/customer")
+@CrossOrigin
 public class CustomerController {
     private final BookstoreService bookstoreService;
 
