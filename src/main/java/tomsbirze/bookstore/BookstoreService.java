@@ -21,9 +21,7 @@ public class BookstoreService {
     }
 
     public void saveBook(Book book) {
-        if (bookstoreRepository.findAll()
-                .stream()
-                .anyMatch(b -> b.getTitle().equals(book.getTitle()))) {
+        if (bookstoreRepository.existsByTitle(book.getTitle())) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "A book with that title already exists.");
         }
         bookstoreRepository.save(book);

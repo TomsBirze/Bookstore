@@ -7,6 +7,7 @@ import tomsbirze.bookstore.domain.Book;
 
 @RestController
 @RequestMapping("/admin")
+@CrossOrigin(origins = "http://localhost:5173")
 public class AdminController {
 
     private final BookstoreService bookstoreService;
@@ -14,7 +15,7 @@ public class AdminController {
     public AdminController(BookstoreService bookstoreService) {
         this.bookstoreService = bookstoreService;
     }
-    @CrossOrigin(origins = "http://localhost:5173/")
+
     @PutMapping("/addbook")
     @ResponseStatus(HttpStatus.CREATED)
     public void saveBook(@Valid @RequestBody Book book) {

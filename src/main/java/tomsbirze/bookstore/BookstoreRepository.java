@@ -6,6 +6,6 @@ import tomsbirze.bookstore.domain.Book;
 
 @Repository
 public interface BookstoreRepository extends JpaRepository<Book, Integer> {
-
+    boolean existsByTitle(String title);
 
 }
