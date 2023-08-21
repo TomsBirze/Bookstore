@@ -33,7 +33,7 @@ public class SecurityConfiguration {
         http.httpBasic(withDefaults())
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/customer/**").permitAll()
-                        .requestMatchers("/admin/**").authenticated()
+                        .requestMatchers("/admin/**").permitAll()
                         .anyRequest().authenticated()
                 );
         http.csrf(AbstractHttpConfigurer::disable);
